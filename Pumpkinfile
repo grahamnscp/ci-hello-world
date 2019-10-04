@@ -8,12 +8,12 @@ resource "src-git": {
 
 resource "gitops-git": {
   type: "git"
-  param url: "https://github.com/gpaul/hello-world-gitops"
+  param url: "https://github.com/grahamnscp/ci-hello-world-gitops"
 }
 
 resource "docker-image": {
   type: "image"
-  param url: "docker.io/gpaul/hello-world"
+  param url: "docker.io/grahamh/ci-hello-world"
   param digest: "$(inputs.resources.docker-image.digest)"
 }
 
